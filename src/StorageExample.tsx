@@ -17,6 +17,10 @@ const storeValueInCookie = (varName:string, value:string) => {
     console.log(`cookie storage added: stored ${value} in ${varName}`)
 }
 
+const storeValueInCache = (varName:string, value:string)=>{
+    // TODO This isn't implemented yet
+}
+
 const storeValueInIndexDB = (varName:string, value:string)=>{
     
     var indexedDB = window.indexedDB
@@ -47,7 +51,7 @@ const storeValueInIndexDB = (varName:string, value:string)=>{
         };
     }
 
-
+    console.log(`indexedDB storage added: stored ${value} in ${varName}`)
 }
 
 const StorageExample = () => {
@@ -55,29 +59,31 @@ const StorageExample = () => {
      
     return (<>
         <h3>Local Storage</h3>
-        <StorageInput varName="localStorage1" storageFn={storeValueInLocalStorage}></StorageInput>
+        <StorageInput defaultVarName="localStorage1" storageFn={storeValueInLocalStorage}></StorageInput>
         <h3>Session Storage</h3>
-        <StorageInput varName='sessionStorage1' storageFn={storeValueInSessionStorage}></StorageInput>
+        <StorageInput defaultVarName='sessionStorage1' storageFn={storeValueInSessionStorage}></StorageInput>
         <h3>Cookie Storage</h3>
-        <StorageInput varName='cookieStorage1' storageFn={storeValueInCookie}></StorageInput>
+        <StorageInput defaultVarName='cookieStorage1' storageFn={storeValueInCookie}></StorageInput>
         <h3>IndexedDB Storage</h3>
-        <StorageInput varName='indexedDBStorage1' storageFn={storeValueInIndexDB}></StorageInput>
+        <StorageInput defaultVarName='indexedDBStorage1' storageFn={storeValueInIndexDB}></StorageInput>
     </>
     
     )
  }
 
  interface storageInputProps{
-    varName:string
+    defaultVarName:string
     storageFn:(varName:string, inputValue:string)=>void
  }
 
- const StorageInput:React.FC<storageInputProps> = ({varName, storageFn}) => {
+ const StorageInput:React.FC<storageInputProps> = ({defaultVarName, storageFn}) => {
     const [inputValue, setInputValue] = useState<string>('')
-    
+    const [varName, setVarName] = useState(defaultVarName)
     return (
         <>
-            <label>{varName}</label>
+            <label>key</label>
+            <input value={varName} onChange={(e)=>setVarName(e.target.value)} />
+            <label>value</label>
             <input onChange={(e)=>setInputValue(e.target.value)}></input>
             <button onClick={()=>storageFn(varName, inputValue)}>Save</button>
 
