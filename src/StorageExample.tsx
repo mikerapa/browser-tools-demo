@@ -18,17 +18,17 @@ const storeValueInCookie = (varName:string, value:string) => {
 }
 
 const storeValueInIndexDB = (varName:string, value:string)=>{
-    // This works on all devices/browsers, and uses IndexedDBShim as a final fallback 
-    var indexedDB = window.indexedDB// || window.mozIndexedDB || window.webkitIndexedDB || window.msIndexedDB || window.shimIndexedDB;
+    
+    var indexedDB = window.indexedDB
 
     // Open (or create) the database
     var open = indexedDB.open("MyDatabase", 1);
 
-    // Create the schema
+    // create index and schema
     open.onupgradeneeded = function() {
         var db = open.result;
-        var store = db.createObjectStore("MyObjectStore", {keyPath: "id"});
-        var index = store.createIndex("NameIndex", ["name.last", "name.first"]);
+        var store = db.createObjectStore("MyObjectStore", {keyPath: "name"});
+        var index = store.createIndex("NameIndex", ["name"]);
     };
 
     open.onsuccess = function() {
@@ -38,21 +38,8 @@ const storeValueInIndexDB = (varName:string, value:string)=>{
         var store = tx.objectStore("MyObjectStore");
         var index = store.index("NameIndex");
 
-        // Add some data
-        store.put({id: 12345, name: {first: "John", last: "Doe"}, age: 42});
-        store.put({id: 67890, name: {first: "Bob", last: "Smith"}, age: 35});
-        
-        // Query the data
-        var getJohn = store.get(12345);
-        var getBob = index.get(["Smith", "Bob"]);
-
-        getJohn.onsuccess = function() {
-            console.log(getJohn.result.name.first);  // => "John"
-        };
-
-        getBob.onsuccess = function() {
-            console.log(getBob.result.name.first);   // => "Bob"
-        };
+        // add name/value
+        store.put({name:varName, value:value})
 
         // Close the db when the transaction is done
         tx.oncomplete = function() {
