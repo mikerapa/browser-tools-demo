@@ -1,46 +1,49 @@
-# Getting Started with Create React App
+# Browser Tools Demo
+This sample application is intended to accompany a demonstration of the browser debugging tools. 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Running the sample application
 
 In the project directory, you can run:
 
-### `npm start`
+```npm start```
+
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Note: The IndexedDB example in the Storage section will only work in browsers which use the chromium engine, such as Chrome, Vivaldi, Edge and Brave.
 
-### `npm test`
+Once the application is running, refer to the following section to excersize features and show the corresponding tools in the browser's debugging console. 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Storage Examples
+This portion of the applicaiton is intended to be used with the 'Application' tab of the browser tools. 
 
-### `npm run build`
+### Local Storage
+Add a value and click the 'Save' button. In the browser inspection tools, navigate to the Application tab and click on the Local Storage section on the left panel. 
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+This sample uses the following api. 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```localStorage.setItem(key: string, value: string): void```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+See [Chrome developer documentation on Local Storage](https://developer.chrome.com/docs/devtools/storage/localstorage/) for details about using the Local Storage panel.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Session Storage
+Add a value and click the 'Save' button. In the browser inspection tools, navigate to the Application tab and click on the Session Storage section on the left panel. 
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+This samaple uses the following api:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+```sessionStorage.setItem(key: string, value: string): void```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+See [Chrome developer documentation on Session Storage](https://developer.chrome.com/docs/devtools/storage/sessionstorage/) for details about using the Session Storage panel.
 
-## Learn More
+### Cookies
+Add a name and value, then click the 'Save' button. In the browser inspection tools, navigate to the Application tab and click on the Cookies section on the left panel. This example uses `document.cookie` for setting the cookie value. 
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+See [Chrome developer documentation on cookie managment](https://developer.chrome.com/docs/devtools/storage/cookies/) for details about using the Session Storage panel.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### IndexedDB Storage
+Add a name and value, then click the 'Save' button. In the browser inspection tools, navigate to the Application tab and click on the IndexedDB section on the left panel.
+
+See [Chrome developer documentation on IndexedDB managment](https://developer.chrome.com/docs/devtools/storage/indexeddb/) for details about using the IndexedDB managment panel. 
