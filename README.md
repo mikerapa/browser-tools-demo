@@ -47,3 +47,8 @@ See [Chrome developer documentation on cookie managment](https://developer.chrom
 Add a name and value, then click the 'Save' button. In the browser inspection tools, navigate to the Application tab and click on the IndexedDB section on the left panel.
 
 See [Chrome developer documentation on IndexedDB managment](https://developer.chrome.com/docs/devtools/storage/indexeddb/) for details about using the IndexedDB managment panel. 
+
+## API Example
+This portion of the application is used to demonstrate a call to REST service. Click the 'Get User List' button and see values populate below the button. 
+
+Navigate to the Network tab in the browser's inspection tools. View each instance of the API call when the button is clicked. The data returned is fake user data from [here](https://jsonplaceholder.typicode.com/users).

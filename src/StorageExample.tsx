@@ -58,6 +58,7 @@ const StorageExample = () => {
     const [localStorage1InputValue, setLocalStorage1InputValue] = useState('')
      
     return (<>
+        <h2>Storage Examples</h2>
         <h3>Local Storage</h3>
         <StorageInput defaultVarName="localStorage1" storageFn={storeValueInLocalStorage}></StorageInput>
         <h3>Session Storage</h3>
