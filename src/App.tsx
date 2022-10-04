@@ -4,6 +4,7 @@ import './App.css';
 import storage from './StorageExample';
 import StorageExample from './StorageExample';
 import APIExample from './APIExample';
+import LayoutExample from './LayoutExample';
 
 function App() {
   return (
@@ -14,6 +15,8 @@ function App() {
         </header>
         See <a href="https://github.com/mikerapa/browser-tools-demo/blob/master/README.md">documentation</a> for using this demo. 
       </div>
+
+      <LayoutExample></LayoutExample>
       <StorageExample></StorageExample>
       <APIExample></APIExample>
     </>
