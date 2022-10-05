@@ -26,6 +26,10 @@ const APIExample = () => {
     return (
         <>
             <h2>API Example</h2>
+            <p className="Explain">Clicking the 'Get User List' button below calls an 
+            external REST API to retrieve fake user data. The user data is displayed as 
+            a list beneath the button. Use this to demonstrate a service call in the 
+            Networking tab.</p>
             <button onClick={()=>getUsers(setUserData)}>Get User List</button>
             <ul>
                 {userData.map((u:User)=><li key={u.id}>{u.name} (<i>{u.email}</i>)</li>)}

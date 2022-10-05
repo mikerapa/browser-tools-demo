@@ -5,6 +5,7 @@ import storage from './StorageExample';
 import StorageExample from './StorageExample';
 import APIExample from './APIExample';
 import LayoutExample from './LayoutExample';
+import ElementChangeExample from './ElementChange';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
       <LayoutExample></LayoutExample>
       <StorageExample></StorageExample>
       <APIExample></APIExample>
+      <ElementChangeExample></ElementChangeExample>
     </>
   );
 }

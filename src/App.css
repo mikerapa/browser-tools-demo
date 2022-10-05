@@ -44,8 +44,31 @@
   border-style: solid;
 }
 
+.Explain {
+  border: rgb(110, 184, 209);
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 1px;
+  background-color: lightblue;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 2px;
+  margin: 10px;
+  box-shadow: 2px 2px #888888;
+}
+
 .App-link {
   color: #61dafb;
+}
+
+.Counter {
+  font-size: 22pt;
+  width: auto;
+  padding: 15px;
+  background-color: black;
+  font-family: 'Courier New', Courier, monospace;
+  color: lightgreen;
+  margin: 5px;;
+
 }
 
 @keyframes App-logo-spin {
