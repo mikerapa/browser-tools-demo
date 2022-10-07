@@ -6,6 +6,7 @@ import StorageExample from './StorageExample';
 import APIExample from './APIExample';
 import LayoutExample from './LayoutExample';
 import ElementChangeExample from './ElementChange';
+import ConsoleExample from './ConsoleExample';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
       <StorageExample></StorageExample>
       <APIExample></APIExample>
       <ElementChangeExample></ElementChangeExample>
+      <ConsoleExample></ConsoleExample>
     </>
   );
 }
