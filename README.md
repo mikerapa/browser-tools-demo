@@ -69,3 +69,18 @@ This example displays the device orientation and screen dimensions as
 reported by the browser. To exercise this example, activate the device toolbar in the 
 browser development tool. Change the dimensions and orientation of the simulated device 
 and notice the values changing.
+
+## Location
+This example shows the device location as reported by the browser.
+                Change the browser location in the Sensors panel of the browser development tools. The 
+                value displayed is the timezone name. This example executes 
+`Intl.DateTimeFormat().resolvedOptions().timeZone` in JavaScript to retrieve the value. 
+
+
+# Framework/Library Specific Tooling
+Developers using Angular or ReactJS should consider using the following extensions to ease component
+inspection. 
+
+[React Developer Tools extension for Chrome](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi)
+
+[Angular State Inspector](https://chrome.google.com/webstore/detail/angular-state-inspector/nelkodgfpddgpdbcjinaaalphkfffbem)

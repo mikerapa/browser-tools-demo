@@ -9,6 +9,7 @@ import ElementChangeExample from './ElementChange';
 import ConsoleExample from './ConsoleExample';
 import AnimationExample from './AnimationExample';
 import OrientationExample from './OrientationExample';
+import LocationExample from './LocationExample';
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
       <ConsoleExample></ConsoleExample>
       <AnimationExample></AnimationExample>
       <OrientationExample></OrientationExample>
+      <LocationExample></LocationExample>
     </>
   );
 }
