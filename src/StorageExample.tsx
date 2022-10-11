@@ -59,6 +59,11 @@ const StorageExample = () => {
      
     return (<>
         <h2>Storage Examples</h2>
+        <p className='Explain'>This example demonstrates several methods for storing values in a browser.
+        To excersize this example, navigate to the Application tab in the browser development tools and
+        click on the relevant storage type on the left panel. Use the controls below to store values and 
+        see the changes as they appear in the browser tools.
+        </p>
         <h3>Local Storage</h3>
         <StorageInput defaultVarName="localStorage1" storageFn={storeValueInLocalStorage}></StorageInput>
         <h3>Session Storage</h3>

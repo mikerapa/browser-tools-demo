@@ -24,24 +24,56 @@
   color: white;
 }
 
-.Box1{
-  background-color: yellow;
-  padding: 10px; 
-  border: 4px;
-  max-width: 70%;
-  border-width: 3px;
+.Box {
   border-color: black;
   border-style: solid;
+  border-width: 3px;
+
+
 }
 
-.Box2{
+.Box1 {
+  background-color: yellow;
+  padding: 10px; 
+  max-width: 70%;
+}
+
+.Box2 {
   background-color: rgb(62, 149, 104);
   padding: 10px;
-  border: 4px;
   max-width: 20%;
-  border-width: 3px;
-  border-color: black;
-  border-style: solid;
+  /* transform: skew(14deg); */
+
+}
+
+.TBLogo{
+  animation: wiggle 2s linear infinite;
+  max-width: 200px;
+
+}
+
+@keyframes wiggle {
+  0%, 7% {
+    transform: rotateZ(0);
+  }
+  15% {
+    transform: rotateZ(-15deg);
+  }
+  20% {
+    transform: rotateZ(10deg);
+  }
+  25% {
+    transform: rotateZ(-10deg);
+  }
+  30% {
+    transform: rotateZ(6deg);
+  }
+  35% {
+    transform: rotateZ(-4deg);
+  }
+  40%, 100% {
+    transform: rotateZ(0);
+  }
 }
 
 .Explain {
@@ -52,7 +84,9 @@
   background-color: lightblue;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   padding: 2px;
-  margin: 10px;
+  margin-left: 10px;
+  margin-right: 200px;
+  max-width: 800px;
   box-shadow: 2px 2px #888888;
 }
 
@@ -63,11 +97,11 @@
 .Counter {
   font-size: 22pt;
   width: auto;
-  padding: 15px;
+  /* padding: 5px; */
   background-color: black;
   font-family: 'Courier New', Courier, monospace;
   color: lightgreen;
-  margin: 5px;;
+  margin: 15px;
 
 }
 

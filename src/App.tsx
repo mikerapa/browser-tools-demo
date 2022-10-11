@@ -7,6 +7,8 @@ import APIExample from './APIExample';
 import LayoutExample from './LayoutExample';
 import ElementChangeExample from './ElementChange';
 import ConsoleExample from './ConsoleExample';
+import AnimationExample from './AnimationExample';
+import OrientationExample from './OrientationExample';
 
 function App() {
   return (
@@ -23,6 +25,8 @@ function App() {
       <APIExample></APIExample>
       <ElementChangeExample></ElementChangeExample>
       <ConsoleExample></ConsoleExample>
+      <AnimationExample></AnimationExample>
+      <OrientationExample></OrientationExample>
     </>
   );
 }

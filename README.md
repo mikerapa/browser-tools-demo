@@ -16,6 +16,12 @@ Note: The IndexedDB example in the Storage section will only work in browsers wh
 
 Once the application is running, refer to the following section to excersize features and show the corresponding tools in the browser's debugging console. 
 
+## Layout Example
+This example includes two nested rectangles for which the dimensions are defined by CSS. Go to the Styles panel
+in the Elements tab of the browser dev tools to see the CSS responsible for the width. Uncheck some of the CSS
+properties to see the changes made to the layout.
+
+
 ## Storage Examples
 This portion of the applicaiton is intended to be used with the 'Application' tab of the browser tools. 
 
@@ -52,3 +58,14 @@ See [Chrome developer documentation on IndexedDB managment](https://developer.ch
 This portion of the application is used to demonstrate a call to REST service. Click the 'Get User List' button and see values populate below the button. 
 
 Navigate to the Network tab in the browser's inspection tools. View each instance of the API call when the button is clicked. The data returned is fake user data from [here](https://jsonplaceholder.typicode.com/users).
+
+## Animations
+The TechBash logo rocks back and forth with a simple CSS animation. The logo at the top of the page 
+is also an animation. Navigate to the Animations tab in your browser dev tools to inspect the details. 
+The documentation for this panel can be found on the [Chrome developer documentation site](https://developer.chrome.com/docs/devtools/css/animations/).
+
+## Orientation and dimensions
+This example displays the device orientation and screen dimensions as
+reported by the browser. To exercise this example, activate the device toolbar in the 
+browser development tool. Change the dimensions and orientation of the simulated device 
+and notice the values changing.
