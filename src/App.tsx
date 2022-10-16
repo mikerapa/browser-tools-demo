@@ -10,6 +10,7 @@ import ConsoleExample from './ConsoleExample';
 import AnimationExample from './AnimationExample';
 import OrientationExample from './OrientationExample';
 import LocationExample from './LocationExample';
+import MemoryExample from './MemoryExample';
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
       <AnimationExample></AnimationExample>
       <OrientationExample></OrientationExample>
       <LocationExample></LocationExample>
+      <MemoryExample></MemoryExample>
     </>
   );
 }

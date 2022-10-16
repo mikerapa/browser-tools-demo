@@ -51,6 +51,10 @@ const ConsoleExample = () => {
         
     }
 
+    const consoleError = () =>{console.error("This is an error")}
+    const consoleWarning = () => {console.warn("This is just a warning")}
+    const consoleInfo = () => {console.info("Here is some info, in case you want it.")}
+
     return (
         <>
             <h2>Console Examples</h2>
@@ -59,11 +63,19 @@ const ConsoleExample = () => {
             functions. Observe the output in the Console tab of the dev tools. Refer to the 
             <a href="https://developer.mozilla.org/en-US/docs/Web/API/console"> console documentation</a>
             for more information. </p>
-            <button onClick={timeExample}>Time</button>        
-            <button onClick={countExample}>Count</button>
-            <button onClick={tableExample}>Table</button>
-            <button onClick={assertExample}>Assert</button>
-            <button onClick={groupExample}>Group</button>
+            <div>
+                <button onClick={timeExample}>Time</button>        
+                <button onClick={countExample}>Count</button>
+                <button onClick={tableExample}>Table</button>
+                <button onClick={assertExample}>Assert</button>
+                <button onClick={groupExample}>Group</button>
+            </div>
+            
+            <div>
+                <button onClick={consoleError}>Console Error</button>
+                <button onClick={consoleWarning}>Console Warning</button>
+                <button onClick={consoleInfo}>Console Info</button>
+            </div>
         </>
     )
 }
